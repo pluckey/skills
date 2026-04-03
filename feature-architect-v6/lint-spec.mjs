@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * lint-spec.mjs — Deterministic spec integrity linter for Feature Architect v4
+ * lint-spec.mjs — Deterministic spec integrity linter for Feature Architect v6
  *
  * Usage: node lint-spec.mjs <spec-directory>
  *

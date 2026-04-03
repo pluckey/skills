@@ -46,9 +46,9 @@ For each wave in order (wave 1, wave 2, ...):
 ### Dispatch
 For each task in the current wave:
 
-**If the wave contains a single task** → execute using the Sequential Build-Verify-Amend loop (below). No wave boundary gate. This is v5 behavior exactly.
+**If the wave contains 1-2 tasks** → execute sequentially using the Build-Verify-Amend loop (below). No wave boundary gate. The overhead of agent dispatch, briefing, and result collection exceeds the parallelism benefit for fewer than 3 tasks. The wave plan display still shows these waves (for transparency) but labels them `(sequential)`.
 
-**If the wave contains multiple tasks** → dispatch each task as a parallel sub-agent via the Agent tool. Each agent receives a self-contained brief:
+**If the wave contains 3+ tasks** → dispatch each task as a parallel sub-agent via the Agent tool. Each agent receives a self-contained brief:
 
 **Agent Brief Template:**
 
@@ -73,6 +73,10 @@ FILE SCOPE:
 You MUST only create or modify these files: {Files field from task}
 If you need to modify a file not in this list, STOP and report the issue.
 
+CROSS-REFERENCES:
+The following locations reference concepts this task modifies: {list of file:line references}.
+Verify these are consistent with your changes before reporting COMPLETE.
+
 DONE WHEN:
 {Done when criterion from the task}
 
@@ -80,6 +84,14 @@ AFTER COMPLETION:
 1. Self-verify: run verification patterns on the files you changed. Fix any errors detectable in isolation (syntax, type errors, broken imports) before reporting.
 2. Report: COMPLETE with a one-line summary, or BLOCKED with the issue description and severity (Minor/Moderate/Critical).
 ```
+
+### Infrastructure Failure Handling
+If an agent fails due to infrastructure (API error, timeout, no response) rather than returning a BLOCKED verdict:
+1. **Retry once** — re-dispatch the same agent brief.
+2. **If retry fails** — execute the task inline (orchestrator does it directly).
+3. **Log** the failure as `INFRA-RETRY` (if retry succeeded) or `INFRA-FALLBACK` (if orchestrator took over) in log.md.
+
+Infrastructure failures are NOT task-level errors. They do not trigger the wave boundary gate's failure attribution. The task's output is evaluated normally regardless of how it was executed.
 
 ### Self-Verification (per task)
 Each task — whether executed directly or via sub-agent — must self-verify before reporting completion. Self-verification catches errors detectable without reference to other tasks' work:
@@ -125,6 +137,8 @@ For each task in order:
 2. Execute using the context module's construction patterns.
 3. Mark task status as `complete` in tasks.md (update the `> **Status:** pending` line to `> **Status:** complete`).
 4. Append to `.specs/features/{feature-name}/log.md`.
+
+**Prompt-template tasks**: Tasks that produce prompt templates (roundtable prompts, gate prompts) may structurally satisfy done-when criteria while producing hollow output. After marking complete, note that prompt quality is only verifiable by test invocation or manual review. Post-execution refinement of prompt content is expected and does not constitute a task failure.
 
 ### Verify
 After each task (or batch of related tasks):
