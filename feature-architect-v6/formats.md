@@ -134,6 +134,7 @@ RESULT: [PASS/FAIL]
 ## Checkpoint {N} Response [{timestamp}]
 - **Temperature**: {cool|warm|hot}
 - **Presented**: {what was shown}
+- **Open questions from prior phase**: {resolved: Q→A | deferred: Q (reason) | none}
 - **User said**: {verbatim or close paraphrase}
 - **Action taken**: {amended X | proceeded | re-looped}
 ```

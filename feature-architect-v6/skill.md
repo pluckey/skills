@@ -87,9 +87,10 @@ When the user corrects something at a checkpoint:
 
 1. **Identify affected elements** by stable ID.
 2. **Assess scope**: Does this change the CENTER? If yes — close this spec, open a new one. If no — continue.
-3. **Produce REPLACEMENT elements** (complete new versions, not patches). The correction roundtable receives: current file content + specific changes + instruction to produce only affected elements.
-4. **Apply replacements**: Find each element by its stable ID in the file, swap the entire section (heading through next heading or EOF).
-5. **Run linter** on the result. Fix any violations introduced by the amendment.
-6. **Present clean state** at the next checkpoint.
+3. **Assess reframe impact**: Does this amendment add or remove an AC? If yes — check whether any whiteboard reframe is invalidated by the change. If a reframe assumed something the amendment contradicts, flag it at the checkpoint. The whiteboard is a deliberation record (not amended), but invalidated reframes must be noted so downstream phases don't build on stale reasoning.
+4. **Produce REPLACEMENT elements** (complete new versions, not patches). The correction roundtable receives: current file content + specific changes + instruction to produce only affected elements.
+5. **Apply replacements**: Find each element by its stable ID in the file, swap the entire section (heading through next heading or EOF).
+6. **Run linter** on the result. Fix any violations introduced by the amendment.
+7. **Present clean state** at the next checkpoint.
 
 Amendments are REPLACEMENTS, not patches. The file always reflects current state. Git tracks the history.

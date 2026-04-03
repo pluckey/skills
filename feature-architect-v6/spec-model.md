@@ -23,7 +23,7 @@ center_test:
 ```
 
 - **Exclusion test**: Name something good this center excludes. If you can't, it's too broad.
-- **Boundary discrimination**: Describe a near-miss — something that almost qualifies but shouldn't. This tests the center's edge, not just its core.
+- **Boundary discrimination**: Describe a near-miss — something that almost qualifies but shouldn't. This tests the center's edge, not just its core. The boundary must be stated at the PROBLEM level (what the feature addresses), not the SOLUTION level (how it's implemented). A solution-level boundary tests the design, not the center.
 
 Both are produced by the whiteboard panel during center convergence. The linter validates their presence (P9) and flags components shorter than 10 words (F6).
 
@@ -62,6 +62,7 @@ Key properties:
 - **Center_links are visible.** Blockquote format — the justification is the first thing you read, not hidden metadata.
 - **Edges use IDs.** `Traces: ac-question-persists` — references are to stable identifiers, not sequential numbers.
 - **Forgiving during drafting, strict at validation.** Agents write freely during roundtables. The linter catches missing metadata before the checkpoint.
+- **FAILS-when tests behavior, not just structure.** A FAILS-when clause that only checks for the presence of fields or artifacts can pass even when the analytical method is hollow. Where an AC specifies a method (e.g., "applies inversion thinking"), the FAILS-when clause should include: "The output shows no evidence of applying the specified method." Structure-only testing catches missing pieces; behavior testing catches empty shells.
 
 ## ID Conventions
 
