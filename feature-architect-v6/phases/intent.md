@@ -38,7 +38,7 @@ Follow the search method. Collect 0-3 candidates. If no archive exists or no mat
 
 **Express detection**: If 2+ strong structural analogues are found AND scope is small (1-3 atoms), the feature is a candidate for Express mode. Note this for the triage confirmation if intensity hasn't been locked yet.
 
-**If Express intensity**: proceed to the Express Flow (below). Skip Steps 2-7.
+**If Express intensity**: proceed to the Express Flow (below). Skip Steps 2-6.
 
 ---
 
@@ -58,16 +58,7 @@ Present to the user:
 
 **This is the ONLY checkpoint.** If the user approves, proceed. If the user corrects the center, iterate. If the user says "deeper", upgrade to Focused/Standard/Deep — the archive search results carry forward.
 
-### E2: Jacobi Gate Check
-
-→ Load `prompts/jacobi-gate.md`
-
-Fill inputs: center sentence. For whiteboard content, provide: the user's description + center + center_test + archive analogues (there is no full whiteboard document in express mode).
-
-**If PASS**: proceed.
-**If BLOCK**: present verdict to user, iterate on center, re-test.
-
-### E3: Rapid Spec
+### E2: Rapid Spec
 
 The executor writes `.specs/features/{feature-name}/rapid-spec.md` directly. No agent launch, no roundtable.
 
@@ -77,7 +68,7 @@ Contents: center, center_test, analogues in frontmatter. ACs with ac-* IDs (no c
 
 → Run `node {skill-dir}/lint-spec.mjs .specs/features/{feature-name}/`
 
-### E4: Begin Execution
+### E3: Begin Execution
 
 ```
 EXPRESS SPEC COMPLETE. Proceeding directly to Execution phase.
@@ -149,24 +140,7 @@ If FAIL: launch a focused agent (1-2 experts, scoped to the delta). Max 3 iterat
 
 ---
 
-## Step 6: Jacobi Gate
-
-Evaluate the approved whiteboard and requirements for structural flaws before committing to checkpoint.
-
-→ Load `prompts/jacobi-gate.md`
-
-Fill inputs: whiteboard content (post-approval), requirements content, center sentence.
-
-Launch a sub-agent (separate from the whiteboard and requirements agents).
-
-→ Consult `formats.md § Jacobi Gate Verdict Format` for the expected output structure.
-
-**If PASS**: proceed to checkpoint.
-**If BLOCK**: present the verdict to the user. Options: (a) kick back to whiteboard (re-launch Step 2), (b) kick back to requirements (re-launch Step 4), (c) amend the affected artifact, (d) override the Jacobi gate (logged). Re-run Jacobi gate after any fix.
-
----
-
-## Step 7: Checkpoint 1
+## Step 6: Checkpoint 1
 
 Present to the user.
 

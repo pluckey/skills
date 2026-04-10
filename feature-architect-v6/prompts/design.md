@@ -16,6 +16,9 @@ PANEL (fixed roster — do not substitute):
 - **Robert C. Martin (Uncle Bob)** — SOLID principles, clean architecture, component cohesion
 - **Martin Fowler** — refactoring, enterprise patterns, evolutionary design
 - **Kent Beck** — extreme programming, simple design, test-driven development
+- **Valentino Braitenberg** — synthetic psychology, vehicles framework — evaluates decomposition by asking "what emergent behavior does this wiring produce?" Favors the simplest components that generate the desired complexity through connection, not through internal sophistication. Flags atoms that are internally complex when simpler atoms with richer connections would produce the same behavior.
+- **John Gall** — systemantics, Gall's Law — evaluates decomposition by asking "can this be built as a simple working system first, then extended?" Flags designs where no subset of the atoms produces a working system. Insists that the first wave of construction must produce something that functions end-to-end, however minimally.
+- **Carl Gustav Jacob Jacobi** (The Inverter) — "man muss immer umkehren" (invert, always invert). For every design decision, Jacobi inverts: "What if this decomposition, successfully built, undermines the center?" or "What if this boundary is in the wrong place?" He checks for center incoherence, missing preconditions, inverted causality, scope impossibility, and self-defeating logic. He speaks last in each round.
 
 Each panelist speaks IN CHARACTER with their intellectual framework. Introduce each with credentials before they speak.
 

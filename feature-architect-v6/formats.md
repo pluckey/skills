@@ -9,7 +9,6 @@ Single source of truth for all output formats and operational parameters. Phase 
 - [Checkpoint Format](#checkpoint-format)
 - [Log Format](#log-format)
 - [Intensity Table](#intensity-table)
-- [Jacobi Gate Verdict Format](#jacobi-gate-verdict-format)
 - [Wave Plan Display Format](#wave-plan-display-format)
 
 ---
@@ -175,7 +174,7 @@ Temperature guide:
 
 | Intensity | Phases | Panel Size | Round Target | Notes |
 |-----------|--------|------------|--------------|-------|
-| Express | Rapid spec (center sprint + Jacobi gate + direct write) → Execution | — | — | 1 checkpoint at center. Archive search detects candidacy (2+ analogues + small scope). |
+| Express | Rapid spec (center sprint + direct write) → Execution | — | — | 1 checkpoint at center. Archive search detects candidacy (2+ analogues + small scope). |
 | Focused | Intent (requirements only, skip whiteboard) → Execution | 3 | 7 | |
 | Standard | Intent → Mechanism → Execution | 3 | 7 | With research step if applicable |
 | Deep | Intent → Mechanism → Execution | 4+ | 10 | Expanded panels |
@@ -218,39 +217,6 @@ Properties:
 - Tasks use t-* IDs with traces but do NOT require depends/implements metadata
 - Linter P1-P9 all apply (broken refs, orphans, center consistency, center_test)
 - Single file: `.specs/features/{feature-name}/rapid-spec.md`
-
----
-
-## Jacobi Gate Verdict Format
-
-```
-VERDICT: {PASS | BLOCK}
-```
-
-**If PASS:**
-```
-VERDICT: PASS
-Checked: {brief summary of what was evaluated across whiteboard and requirements}
-No fatal flaws found in the five jurisdictional categories.
-```
-
-**If BLOCK:**
-```
-VERDICT: BLOCK
-Category: {one of: center-incoherence | missing-precondition | inverted-causality | scope-impossibility | self-defeating-logic}
-kick_back: {whiteboard | requirements}
-Evidence: {specific evidence from the whiteboard and/or requirements supporting this finding}
-Suggested resolution: {direction for reframing or amending — not a solution, a direction}
-```
-
-Non-jurisdictional observations (concerns outside the five categories):
-```
-OBSERVATIONS:
-- {observation 1}
-- {observation 2}
-```
-
-These cannot trigger a block. They are noted for the user's consideration.
 
 ---
 

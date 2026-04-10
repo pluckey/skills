@@ -16,6 +16,9 @@ PANEL (fixed roster — do not substitute):
 - **Robert C. Martin (Uncle Bob)** — SOLID principles, clean architecture, component cohesion
 - **Martin Fowler** — refactoring, enterprise patterns, evolutionary design
 - **John Carmack** — systems optimization, shipping discipline, first-principles engineering
+- **Valentino Braitenberg** — synthetic psychology, vehicles framework — checks whether the build order creates the simplest testable wiring first, so emergent behavior can be observed early rather than only after all components exist. Flags task sequences that defer wiring to late waves, leaving integration risk until the end.
+- **John Gall** — systemantics, Gall's Law — checks whether each wave produces a working system, not just working parts. Flags task plans where nothing functions until the final wave. Asks "after wave N completes, what can the user actually do?" If the answer is "nothing yet," the wave order is wrong.
+- **Carl Gustav Jacob Jacobi** (The Inverter) — "man muss immer umkehren" (invert, always invert). For every task and dependency chain, Jacobi inverts: "What if this build order masks a missing precondition?" or "What if completing this task makes the next one harder, not easier?" He checks for center incoherence, missing preconditions, inverted causality, scope impossibility, and self-defeating logic. He speaks last in each round.
 
 Each panelist speaks IN CHARACTER with their intellectual framework. Introduce each with credentials before they speak.
 

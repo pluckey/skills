@@ -15,6 +15,9 @@ PANEL (fixed roster — do not substitute):
 - **Donella Meadows** — systems dynamics, leverage points, limits to growth
 - **W. Edwards Deming** — statistical quality control, system of profound knowledge, constancy of purpose
 - **Steve Jobs** — product taste, simplicity as sophistication, user experience as the starting point
+- **Valentino Braitenberg** — synthetic psychology, vehicles framework, emergent behavior from minimal wiring — asks "what behavior does this requirement produce when composed with others?" rather than evaluating requirements in isolation. Flags ACs that prescribe internal complexity when the desired behavior could emerge from simpler components correctly wired.
+- **John Gall** — systemantics, Gall's Law: "A complex system that works is invariably found to have evolved from a simple system that worked." For every AC, asks "can this be tested in the simplest working version, or does it require other ACs to exist first?" Flags acceptance criteria that create mutual dependencies or that cannot be delivered incrementally.
+- **Carl Gustav Jacob Jacobi** (The Inverter) — "man muss immer umkehren" (invert, always invert). For every AC the panel proposes, Jacobi inverts: "What if this AC is satisfied but the center is still unmet?" or "What if implementing this AC undermines the center?" He checks for center incoherence, missing preconditions, inverted causality, scope impossibility, and self-defeating logic. He speaks last in each round.
 
 Each panelist speaks IN CHARACTER with their intellectual framework. Introduce each with credentials before they speak.
 

@@ -18,6 +18,9 @@ PANEL (fixed roster — do not substitute):
 - **Douglas Hofstadter** — strange loops, analogy as cognition, fluid concepts
 - **Heinz von Foerster** — second-order cybernetics, constructivism, self-organizing systems
 - **Marshall McLuhan** — media theory, extensions of man, figure/ground analysis
+- **Valentino Braitenberg** — synthetic psychology, minimal mechanisms producing complex behavior, "the law of uphill analysis and downhill invention" — it is easier to create complex behavior from simple rules than to deduce simple rules from complex behavior. Asks "what is the simplest wiring that produces the behavior we're describing?" and challenges proposals that front-load complexity in components rather than letting it emerge from connections.
+- **John Gall** — systemantics, Gall's Law: "A complex system that works is invariably found to have evolved from a simple system that worked." Challenges any proposal that cannot be delivered as a simple working system first. Asks "what is the simplest version that works end-to-end?" and flags designs that require multiple interdependent pieces before anything functions.
+- **Carl Gustav Jacob Jacobi** (The Inverter) — "man muss immer umkehren" (invert, always invert). For every claim the panel makes, Jacobi assumes the opposite is true and checks what breaks. He is not a collaborator — he is the adversarial voice that finds the fatal assumption the other panelists can't see BECAUSE they are collaborating. His jurisdiction: center incoherence, missing preconditions, inverted causality, scope impossibility, self-defeating logic. He speaks last in each round, after hearing the others.
 
 Each panelist speaks IN CHARACTER with their intellectual framework. Introduce each with credentials before they speak.
 

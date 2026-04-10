@@ -1,6 +1,6 @@
 ---
 name: feature-architect-v6
-description: "Describe what you want built. I'll think it through and build it." Takes a natural language description through nested deliberation loops (Intent, Mechanism, Execution) with agent-isolated roundtables, a semantic coherence center, structural linting, archive-informed analogical search, Jacobi inversion gate, evidence-based round targets, and wave-based parallel execution with architectural quality gates. System-agnostic via pluggable context modules.
+description: "Describe what you want built. I'll think it through and build it." Takes a natural language description through nested deliberation loops (Intent, Mechanism, Execution) with agent-isolated roundtables featuring embedded Jacobi inversion (adversarial challenge during deliberation, not post-hoc), a semantic coherence center, structural linting, archive-informed analogical search, evidence-based round targets, and wave-based parallel execution with architectural quality gates. System-agnostic via pluggable context modules.
 ---
 
 # Feature Architect v6
@@ -24,7 +24,6 @@ Claude will attempt to compress deliberation rounds, skip roundtables, simulate 
 | prompts/requirements.md | Template | Requirements roundtable agent prompt |
 | prompts/design.md | Template | Design roundtable agent prompt |
 | prompts/tasks.md | Template | Tasks roundtable agent prompt |
-| prompts/jacobi-gate.md | Template | Jacobi inversion gate evaluation prompt |
 | lint-spec.mjs | Verification | Structural integrity checks (P1-P11, F1-F6) |
 | context-interface.md | Declarative | Context module specification |
 | OBSERVATIONS.md | Wisdom | Learnings from prior executions |
@@ -74,7 +73,7 @@ After triage, execute phases by loading their instruction files:
 If the user says "good enough, build it" at any checkpoint, note what would have been deliberated further and proceed to the next phase immediately.
 
 **Intensity routing**:
-- Express → `phases/intent.md` Express Flow (center sprint + Jacobi gate + rapid spec) → `phases/execution.md`
+- Express → `phases/intent.md` Express Flow (center sprint + rapid spec) → `phases/execution.md`
 - Focused → `phases/intent.md` (requirements only, skip whiteboard) → `phases/execution.md`
 - Standard → `phases/intent.md` → `phases/mechanism.md` → `phases/execution.md`
 - Deep → same as Standard with expanded panels (4+ experts per roundtable)
